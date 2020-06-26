@@ -43,7 +43,7 @@ img {
 .game-time,
 .game-score {
 	padding: 0.4rem;
-	font-family: fantasy;
+	font-family: fantasy, cursive, sans-serif;
 	letter-spacing: 1px;
 	word-spacing: 1px;
 	text-align: center;
