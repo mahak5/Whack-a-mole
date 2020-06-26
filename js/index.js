@@ -41,6 +41,7 @@ function gameplay() {
 	gametimer();
 }
 document.querySelector('.play').addEventListener('click', function () {
+	document.querySelector('.play').classList.add('play-invisible');
 	if (!interval) {
 		interval = setInterval(gameplay, 1000);
 	}

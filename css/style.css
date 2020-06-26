@@ -89,3 +89,6 @@ button:hover {
 	transform-origin: bottom;
 	transition: transform 0.5s linear;
 }
+.play-invisible {
+	display: none;
+}
