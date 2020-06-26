@@ -6,11 +6,14 @@ let score = 0;
 let scorefield = document.querySelector('.score');
 let timefield = document.querySelector('.timer');
 let c = timefield.textContent;
+let lastr;
 function gameMain() {
 	moleArr.forEach((curr) => {
 		curr.classList.remove('mole-active');
 	});
 	random = Math.floor(Math.random() * moleArr.length);
+	// console.log(random);
+	if (random === lastr) gameMain();
 	moleArr[random].classList.add('mole-active');
 	spot = moleArr[random].id;
 	// console.log(spot);
@@ -40,8 +43,9 @@ function gameplay() {
 	gameMain();
 	gametimer();
 }
-document.querySelector('.play').addEventListener('click', function () {
-	document.querySelector('.play').classList.add('play-invisible');
+let playbtn = document.querySelector('.play');
+playbtn.addEventListener('click', function () {
+	playbtn.classList.add('play-invisible');
 	if (!interval) {
 		interval = setInterval(gameplay, 1000);
 	}
